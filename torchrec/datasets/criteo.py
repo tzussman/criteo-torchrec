@@ -28,7 +28,7 @@ from torchrec.sparse.jagged_tensor import KeyedJaggedTensor
 FREQUENCY_THRESHOLD = 3
 INT_FEATURE_COUNT = 13
 CAT_FEATURE_COUNT = 26
-DAYS = 24
+DAYS = 5  # Number of dataset files
 DEFAULT_LABEL_NAME = "label"
 DEFAULT_INT_NAMES: List[str] = [f"int_{idx}" for idx in range(INT_FEATURE_COUNT)]
 DEFAULT_CAT_NAMES: List[str] = [f"cat_{idx}" for idx in range(CAT_FEATURE_COUNT)]
@@ -37,7 +37,7 @@ DEFAULT_COLUMN_NAMES: List[str] = [
     *DEFAULT_INT_NAMES,
     *DEFAULT_CAT_NAMES,
 ]
-TOTAL_TRAINING_SAMPLES = 4195197692  # Number of rows across days 0-22 (day 23 is used for validation and testing)
+# TOTAL_TRAINING_SAMPLES = 4195197692  # Number of rows across days 0-22 (day 23 is used for validation and testing)
 
 COLUMN_TYPE_CASTERS: List[Callable[[Union[int, str]], Union[int, str]]] = [
     lambda val: safe_cast(val, int, 0),

@@ -14,6 +14,7 @@ from typing import List
 
 from torchrec.datasets.criteo import BinaryCriteoUtils
 
+DAYS = 5
 
 def parse_args(argv: List[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -60,7 +61,7 @@ def main(argv: List[str]) -> None:
     output_dir = args.output_dir
 
     if args.dataset_name == "criteo_1tb":
-        in_files_l = [f"day_{i}" for i in range(24)]
+        in_files_l = [f"day_{i}" for i in range(DAYS)]
         out_files_l = in_files_l
     else:
         # criteo_kaggle code path

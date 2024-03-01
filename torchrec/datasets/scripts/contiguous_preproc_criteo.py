@@ -16,7 +16,7 @@ from typing import List
 
 from torchrec.datasets.criteo import BinaryCriteoUtils
 
-DAYS = 24
+DAYS = 5
 
 
 def parse_args(argv: List[str]) -> argparse.Namespace:

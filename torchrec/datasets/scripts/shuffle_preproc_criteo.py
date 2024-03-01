@@ -16,7 +16,7 @@ from typing import List
 import numpy as np
 from torchrec.datasets.criteo import BinaryCriteoUtils
 
-DAYS = 24
+DAYS = 5
 COLUMNS = 40  # 13 dense, 26 sparse, 1 label, in that order
 INT_COLUMNS = 13
 
